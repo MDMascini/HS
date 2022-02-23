@@ -1,7 +1,8 @@
 def plot_overtop(alpha, Tp, factor_berm, 
-                factor_roughness, factor_waves, factor_wall, factor_combi, H_sig, max_q=10):
+                factor_roughness, factor_waves, factor_wall, factor_combi, H_sig, design_water_level=design_water_level, max_q=10):
   import numpy as np 
   import matplotlib.pyplot as plt
+  surcharge=0.6
   discharge = np.linspace(0.1,200, 100) / 1000
   overtop_discharge = max_q / 1000
   A=0.026 
