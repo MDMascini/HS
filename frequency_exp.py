@@ -5,8 +5,8 @@ def frequency(water_level_freq, C, D):
     return np.exp(-(water_level_freq - C)/D)
 
 def fit_func(waterlevels_f, frequencies, initial_guess=(2,2)):
-  parameters, k = so.curve_fit(frequency, [water_level_100y, water_level_1000y], 
-                          [f_100, f_1000], initial_guess);
+  parameters, k = so.curve_fit(frequency, waterlevels_f, 
+                          frequencies, initial_guess);
   C = parameters[0]
   D = parameters[1]
   return C, D
