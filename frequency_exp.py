@@ -1,5 +1,6 @@
 import numpy as np
 import scipy.optimize as so
+import matplotlib.pyplot as plt
 
 def frequency(water_level_freq, C, D):
     return np.exp(-(water_level_freq - C)/D)
