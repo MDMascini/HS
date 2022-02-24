@@ -24,5 +24,4 @@ def make_plot(f, water_levels, waterlevels_f, frequencies):
   plt.ylabel('Water level [NAP+m]')
   plt.xlabel('frequency [1/year]')
   plt.title('Water level - frequency curve');
-  print('The 4000 year return water level is',np.round(water_level(1/4000, C, D), 2), 
-        'm + NAP')
+
