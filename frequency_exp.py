@@ -15,3 +15,13 @@ f = np.linspace(1/100000, 1, 1000)
 
 def water_level(f, C, D):
   return -np.log(f)*D + C 
+
+def make_plot(f, water_levels, waterlevels_f, frequencies):
+  plt.plot(frequencies, waterlevels_f, 'ro')
+  plt.plot(f, water_levels)
+  plt.xscale('log')
+  plt.ylabel('Water level [NAP+m]')
+  plt.xlabel('frequency [1/year]')
+  plt.title('Water level - frequency curve');
+  print('The 4000 year return water level is',np.round(water_level(1/4000, C, D), 2), 
+        'm + NAP')
